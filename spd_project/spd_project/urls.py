@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from orders.views import orders_page, OrderView
+from orders.views import orders_page, OrderView, orders_app
 from products.views import products_page, ProductsView
 from rest_framework.routers import SimpleRouter
 
@@ -30,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', orders_page),
     path('products/', products_page),
+    path('orders_page/', orders_app),
 ]
 
 urlpatterns += router.urls  # так как это два списка, то мы просто добавим в urlpatterns те url, которые создаст router

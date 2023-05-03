@@ -15,3 +15,5 @@ class OrderView(ModelViewSet):
     serializer_class = OrderSerializer
 
 
+def orders_app(request):
+    return render(request=request, template_name='main_app.html')
